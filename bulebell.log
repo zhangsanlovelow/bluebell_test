@@ -106,3 +106,17 @@
 {"level":"INFO","time":"2024-12-04T21:11:28.429+0800","caller":"bluebell_test/main.go:36","msg":"logger init success..."}
 {"level":"INFO","time":"2024-12-04T21:11:28.449+0800","caller":"bluebell_test/main.go:43","msg":"mysql init success..."}
 {"level":"ERROR","time":"2024-12-04T21:11:28.950+0800","caller":"bluebell_test/main.go:48","msg":"init redis failed, err:","error":"dial tcp :6379: connectex: No connection could be made because the target machine actively refused it."}
+{"level":"INFO","time":"2024-12-04T21:55:21.307+0800","caller":"bluebell_test/main.go:36","msg":"logger init success..."}
+{"level":"INFO","time":"2024-12-04T21:55:21.327+0800","caller":"bluebell_test/main.go:43","msg":"mysql init success..."}
+{"level":"INFO","time":"2024-12-04T21:55:21.328+0800","caller":"bluebell_test/main.go:53","msg":"redis init success..."}
+{"level":"INFO","time":"2024-12-04T21:58:16.486+0800","caller":"bluebell_test/main.go:36","msg":"logger init success..."}
+{"level":"INFO","time":"2024-12-04T21:58:16.506+0800","caller":"bluebell_test/main.go:43","msg":"mysql init success..."}
+{"level":"INFO","time":"2024-12-04T21:58:16.506+0800","caller":"bluebell_test/main.go:53","msg":"redis init success..."}
+{"level":"INFO","time":"2024-12-04T22:00:49.198+0800","caller":"bluebell_test/main.go:96","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2024-12-04T22:00:49.199+0800","caller":"bluebell_test/main.go:105","msg":"Server exiting"}
+{"level":"INFO","time":"2024-12-04T22:00:54.972+0800","caller":"bluebell_test/main.go:36","msg":"logger init success..."}
+{"level":"INFO","time":"2024-12-04T22:00:54.991+0800","caller":"bluebell_test/main.go:43","msg":"mysql init success..."}
+{"level":"INFO","time":"2024-12-04T22:00:54.992+0800","caller":"bluebell_test/main.go:53","msg":"redis init success..."}
+{"level":"INFO","time":"2024-12-04T22:02:31.353+0800","caller":"bluebell_test/main.go:36","msg":"logger init success..."}
+{"level":"INFO","time":"2024-12-04T22:02:31.373+0800","caller":"bluebell_test/main.go:43","msg":"mysql init success..."}
+{"level":"INFO","time":"2024-12-04T22:02:31.374+0800","caller":"bluebell_test/main.go:54","msg":"redis init success..."}
