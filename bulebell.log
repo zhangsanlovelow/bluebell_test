@@ -72,3 +72,37 @@
 {"level":"INFO","time":"2024-11-27T20:57:15.639+0800","caller":"logger/logger.go:80","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":0.0050048}
 {"level":"INFO","time":"2024-11-27T22:23:04.608+0800","caller":"bluebell_test/main.go:96","msg":"Shutdown Server ..."}
 {"level":"INFO","time":"2024-11-27T22:23:04.608+0800","caller":"bluebell_test/main.go:105","msg":"Server exiting"}
+{"level":"INFO","time":"2024-11-30T12:46:57.567+0800","caller":"bluebell_test/main.go:36","msg":"logger init success..."}
+{"level":"INFO","time":"2024-11-30T12:46:57.588+0800","caller":"bluebell_test/main.go:43","msg":"mysql init success..."}
+{"level":"INFO","time":"2024-11-30T12:46:57.590+0800","caller":"bluebell_test/main.go:53","msg":"redis init success..."}
+{"level":"INFO","time":"2024-11-30T12:47:21.510+0800","caller":"logger/logger.go:80","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"::1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":0.0135124}
+{"level":"INFO","time":"2024-11-30T13:02:07.709+0800","caller":"bluebell_test/main.go:96","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2024-11-30T13:02:07.709+0800","caller":"bluebell_test/main.go:105","msg":"Server exiting"}
+{"level":"INFO","time":"2024-11-30T13:02:09.961+0800","caller":"bluebell_test/main.go:36","msg":"logger init success..."}
+{"level":"INFO","time":"2024-11-30T13:02:09.980+0800","caller":"bluebell_test/main.go:43","msg":"mysql init success..."}
+{"level":"INFO","time":"2024-11-30T13:02:09.981+0800","caller":"bluebell_test/main.go:53","msg":"redis init success..."}
+{"level":"INFO","time":"2024-11-30T13:02:41.252+0800","caller":"logger/logger.go:80","msg":"/ping","status":401,"method":"POST","path":"/ping","query":"","ip":"::1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":0}
+{"level":"INFO","time":"2024-11-30T13:03:36.948+0800","caller":"bluebell_test/main.go:96","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2024-11-30T13:03:36.949+0800","caller":"bluebell_test/main.go:105","msg":"Server exiting"}
+{"level":"INFO","time":"2024-11-30T13:03:40.046+0800","caller":"bluebell_test/main.go:36","msg":"logger init success..."}
+{"level":"INFO","time":"2024-11-30T13:03:40.065+0800","caller":"bluebell_test/main.go:43","msg":"mysql init success..."}
+{"level":"INFO","time":"2024-11-30T13:03:40.066+0800","caller":"bluebell_test/main.go:53","msg":"redis init success..."}
+{"level":"INFO","time":"2024-11-30T13:03:44.336+0800","caller":"logger/logger.go:80","msg":"/ping","status":401,"method":"POST","path":"/ping","query":"","ip":"::1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":0}
+{"level":"INFO","time":"2024-11-30T13:05:27.781+0800","caller":"bluebell_test/main.go:96","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2024-11-30T13:05:27.781+0800","caller":"bluebell_test/main.go:105","msg":"Server exiting"}
+{"level":"INFO","time":"2024-11-30T13:05:30.030+0800","caller":"bluebell_test/main.go:36","msg":"logger init success..."}
+{"level":"INFO","time":"2024-11-30T13:05:30.050+0800","caller":"bluebell_test/main.go:43","msg":"mysql init success..."}
+{"level":"INFO","time":"2024-11-30T13:05:30.050+0800","caller":"bluebell_test/main.go:53","msg":"redis init success..."}
+{"level":"INFO","time":"2024-11-30T13:05:51.907+0800","caller":"logger/logger.go:80","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"::1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":0.0010006}
+{"level":"INFO","time":"2024-11-30T13:06:06.352+0800","caller":"logger/logger.go:80","msg":"/ping","status":200,"method":"POST","path":"/ping","query":"","ip":"::1","user-agent":"PostmanRuntime/7.42.0","errors":"","cost":0}
+{"level":"INFO","time":"2024-11-30T22:37:36.093+0800","caller":"bluebell_test/main.go:96","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2024-11-30T22:37:36.093+0800","caller":"bluebell_test/main.go:105","msg":"Server exiting"}
+{"level":"INFO","time":"2024-12-04T21:04:52.560+0800","caller":"bluebell_test/main.go:36","msg":"logger init success..."}
+{"level":"INFO","time":"2024-12-04T21:04:52.580+0800","caller":"bluebell_test/main.go:43","msg":"mysql init success..."}
+{"level":"ERROR","time":"2024-12-04T21:04:53.081+0800","caller":"bluebell_test/main.go:48","msg":"init redis failed, err:","error":"dial tcp :6379: connectex: No connection could be made because the target machine actively refused it."}
+{"level":"INFO","time":"2024-12-04T21:09:13.867+0800","caller":"bluebell_test/main.go:36","msg":"logger init success..."}
+{"level":"INFO","time":"2024-12-04T21:09:13.887+0800","caller":"bluebell_test/main.go:43","msg":"mysql init success..."}
+{"level":"ERROR","time":"2024-12-04T21:09:14.387+0800","caller":"bluebell_test/main.go:48","msg":"init redis failed, err:","error":"dial tcp :6379: connectex: No connection could be made because the target machine actively refused it."}
+{"level":"INFO","time":"2024-12-04T21:11:28.429+0800","caller":"bluebell_test/main.go:36","msg":"logger init success..."}
+{"level":"INFO","time":"2024-12-04T21:11:28.449+0800","caller":"bluebell_test/main.go:43","msg":"mysql init success..."}
+{"level":"ERROR","time":"2024-12-04T21:11:28.950+0800","caller":"bluebell_test/main.go:48","msg":"init redis failed, err:","error":"dial tcp :6379: connectex: No connection could be made because the target machine actively refused it."}

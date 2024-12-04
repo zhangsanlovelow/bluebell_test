@@ -13,6 +13,7 @@ const (
 
 	CodeNeedLogin
 	CodeInvalidToken
+	CodeExpiredToken
 )
 
 var codeMsgMap = map[ResCode]string{
@@ -25,6 +26,7 @@ var codeMsgMap = map[ResCode]string{
 
 	CodeNeedLogin:    "需要登录",
 	CodeInvalidToken: "无效的token",
+	CodeExpiredToken: "token已过期",
 }
 
 // Msg 获取状态码对应的消息

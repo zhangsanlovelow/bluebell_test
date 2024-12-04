@@ -3,6 +3,7 @@ package logic
 import (
 	"bullbell_test/dao/mysql"
 	"bullbell_test/models"
+	"bullbell_test/pkg/jwt"
 	"bullbell_test/pkg/snowflake"
 	"fmt"
 
@@ -40,10 +41,15 @@ func Login(p *models.ParamLogin) (*models.User, error) {
 		Password: p.Password,
 	}
 	if err := mysql.Login(user); err != nil {
-		fmt.Println("--------logic", err)
+
 		return nil, err
 	}
 	// 登录成功，创建token并返回用户信息
-
+	token, err := jwt.GenToken(user.UserID, user.UserName)
+	if err != nil {
+		return nil, err
+	}
+	// 返回用户token信息
+	user.Token = token
 	return user, nil
 }

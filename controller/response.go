@@ -6,12 +6,14 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// ResponseData 响应数据
 type ResponseData struct {
 	Code ResCode     `json:"code"`
 	Msg  interface{} `json:"msg"`
 	Data interface{} `json:"data,omitempty"`
 }
 
+// ResponseError 响应错误
 func ResponseError(c *gin.Context, code ResCode) {
 	c.JSON(http.StatusOK, &ResponseData{
 		Code: code,
@@ -20,6 +22,7 @@ func ResponseError(c *gin.Context, code ResCode) {
 	})
 }
 
+// ResponseErrorWithMsg 响应错误并附带错误信息
 func ResponseErrorWithMsg(c *gin.Context, code ResCode, msg interface{}) {
 	c.JSON(http.StatusOK, &ResponseData{
 		Code: code,
@@ -28,6 +31,7 @@ func ResponseErrorWithMsg(c *gin.Context, code ResCode, msg interface{}) {
 	})
 }
 
+// ResponseSuccess 响应成功
 func ResponseSuccess(c *gin.Context, data interface{}) {
 	c.JSON(http.StatusOK, &ResponseData{
 		Code: CodeSuccess,
