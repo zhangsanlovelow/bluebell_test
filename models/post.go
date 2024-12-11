@@ -15,3 +15,10 @@ type Post struct {
 	CreateTime  time.Time `json:"create_time" db:"create_time"`                      //创建时间
 	UpdateTime  time.Time `json:"update_time" db:"update_time"`                      //	更新时间
 }
+
+// ApiPostDetail 是帖子详情模型，包含帖子信息和社区信息
+type ApiPostDetail struct {
+	AuthorName string `json:"author_name"`
+	*Post
+	*CommunityDetail `json:"community"`
+}
