@@ -55,6 +55,7 @@ func SignUpHandler(c *gin.Context) {
 	ResponseSuccess(c, nil)
 }
 
+// LoginHandler 处理登录请求
 func LoginHandler(c *gin.Context) {
 	//1.接收参数后验证参数合法性
 	p := new(models.ParamLogin)
@@ -96,6 +97,11 @@ func LoginHandler(c *gin.Context) {
 	// 	"user_id": user.UserID,
 	// 	"token":   user.Token,
 	// })
+
+	//调试代码
+	// c.Set(CtxUserIDKey, user.UserID)
+	// uid, _ := c.Get(CtxUserIDKey)
+	// fmt.Println(uid, "xxxxxxxx")
 
 	ResponseSuccess(c, gin.H{
 		"user_id":   fmt.Sprintf("%d", user.UserID), // id值大于1<<53-1  int64类型的最大值是1<<63-1
