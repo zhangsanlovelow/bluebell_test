@@ -59,3 +59,25 @@ func GetCommunityByID(communityID int64) (CommunityDetail *models.CommunityDetai
 	}
 	return
 }
+
+// GetPostIDList 获取帖子ID列表
+func GetPostIDList(page, size int64) (postIDList []int64, err error) {
+	sqlStr := `select post_id
+	 from post
+	 order by create_time desc
+	 limit ?,?`
+	rows, err := db.Query(sqlStr, size*(page-1), size)
+	if err != nil {
+		zap.L().Error("db.Query() failed", zap.Error(err))
+		return
+	}
+	for rows.Next() {
+		var postID int64
+		if err = rows.Scan(&postID); err != nil {
+			zap.L().Error("rows.Scan() failed", zap.Error(err))
+			return
+		}
+		postIDList = append(postIDList, postID)
+	}
+	return
+}

@@ -28,6 +28,7 @@ func Setup() *gin.Engine {
 		//发帖子
 		v1.POST("/post", controller.CreatePostHandler)
 		v1.GET("/post/:id", controller.GetPostDetailHandler)
+		v1.GET("/posts", controller.GetPostListHandler)
 		v1.POST("/ping", middlewares.AuthMiddleware(), func(c *gin.Context) {
 			c.JSON(http.StatusOK, gin.H{
 				"message": "pong",

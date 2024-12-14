@@ -18,14 +18,14 @@ func CreatePostHandler(c *gin.Context) {
 		ResponseError(c, CodeInvalidParam)
 		return
 	}
-	//2.取出当前用户id
-	// userId, err := getCurrentUserID(c)
-	// if err != nil {
-	// 	zap.L().Error("getCurrentUserID() failed", zap.Error(err))
-	// 	ResponseError(c, CodeNeedLogin)
-	// 	return
-	// }
-	// post.AuthorID = userId
+	// 2.取出当前用户id
+	userId, err := getCurrentUserID(c)
+	if err != nil {
+		zap.L().Error("getCurrentUserID() failed", zap.Error(err))
+		ResponseError(c, CodeNeedLogin)
+		return
+	}
+	post.AuthorID = userId
 	//3.处理帖子数据
 	if err := logic.CreatePost(post); err != nil {
 		zap.L().Error("logic.CreatePost() failed", zap.Error(err))
@@ -56,5 +56,26 @@ func GetPostDetailHandler(c *gin.Context) {
 	}
 
 	//3.返回
+	ResponseSuccess(c, data)
+}
+
+// GetPostListHandler 获取帖子列表
+func GetPostListHandler(c *gin.Context) {
+	// 1.获取分页参数page size
+	page, size, err := getPageInfo(c)
+	if err != nil {
+		zap.L().Error("getPageInfo() failed", zap.Error(err))
+		ResponseError(c, CodeInvalidParam)
+		return
+	}
+	//2. 获取帖子列表
+	data, err := logic.GetPostList(page, size)
+	if err != nil {
+		zap.L().Error("logic.GetPostList() failed", zap.Error(err))
+		ResponseError(c, CodeServerBusy)
+		return
+	}
+	// 3.返回
+
 	ResponseSuccess(c, data)
 }
