@@ -3,6 +3,7 @@ package middlewares
 import (
 	"bullbell_test/controller"
 	"bullbell_test/pkg/jwt"
+	"fmt"
 	"net/http"
 	"strings"
 
@@ -38,6 +39,7 @@ func AuthMiddleware() gin.HandlerFunc {
 
 		// 将当前请求的userID信息保存到请求的上下文c上
 		c.Set(controller.CtxUserIDKey, mc.UserID)
+		fmt.Println(mc.UserID, "-------------")
 		c.Next() // 后续的处理函数可以用过c.Get(CtxUserIDKey)来获取当前请求的用户ID
 	}
 }
